@@ -1,0 +1,31 @@
+<div>
+  <table class='board' cellpadding='1'>
+    <tr>
+      <th colspan='6'>Frame 1</th>
+      <th colspan='6'>Frame 2</th>
+      <th colspan='6'>Frame 3</th>
+      <th colspan='6'>Frame 4</th>
+      <th colspan='6'>Frame 5</th>
+      <th colspan='6'>Frame 6</th>
+      <th colspan='6'>Frame 7</th>
+      <th colspan='6'>Frame 8</th>
+      <th colspan='6'>Frame 9</th>
+      <th colspan='6'>Frame 10</th>
+    </tr>
+    <tr>
+      <%@game.frames[0..-2].each_with_index do |frame, index| %>
+        <td colspan='3'><%=frame.strike? ? "X" : frame.first%></td>
+        <td colspan='3'><%=frame.spare? ? "/" : frame.second%></td>
+      <% end %>
+      <td colspan='2'><%=last.first%></td>
+      <td colspan='2'><%=last.second%></td>
+      <td colspan='2'><%=last.third%></td>
+    </tr>
+    <tr>
+      <%@game.frames_score.each do |score| %>
+        <td colspan='6'><%=score%></td>
+      <% end %>
+      <td colspan='6'><%=@game.score%></td>
+    </tr>
+  </table>
+</div>

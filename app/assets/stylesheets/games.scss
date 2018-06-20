@@ -1,0 +1,45 @@
+// Place all the styles related to the Games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.board {
+  margin: 0 auto;
+  width: 80%;
+  font-size: 12px;
+  border: 1px solid;
+  text-align: center;
+  table-layout: fixed;
+  margin-bottom: 40px;
+}
+
+.board th,
+td,
+tr {
+  padding: 0;
+  vertical-align: middle;
+}
+
+.board th {
+  border-bottom: 1px solid;
+  height: 30px;
+}
+
+.board th:not(:last-child) {
+  border-right: 1px solid;
+}
+
+.board td {
+  height: 30px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.board tr td:not(:last-child) {
+  border-right: 1px solid;
+}
+
+.board tr:nth-child(2) td:nth-child(even) {
+  border-bottom: 1px solid;
+}
+
+.board tr:nth-child(2) td:last-child {
+  border-bottom: 1px solid;
+}
